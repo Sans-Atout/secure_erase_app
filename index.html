@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">-->
+    <link href="./reset.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Secure Erase App</title>
+  </head>
+  <body>
+    <nav>
+
+      <div>
+        <button class="btn add-trash" onclick="addFile(this);">
+          <img src="./pictures/trash.png"> Add Trash
+        </button>
+      </div>
+
+      <div>
+        <label for="upload-file" class="upload-folder btn">
+            <img src="./pictures/documents.png"> Add files
+        </label>
+        <input  type="file" multiple="multiple" id="upload-file"/>
+      </div>
+
+      <div>
+        <label for="upload-folder" class="upload-folder btn">
+            <img src="./pictures/empty-folder.png"> Add folder
+        </label>
+        <input  type="file" webkitdirectory mozdirectory msdirectory
+                odirectory directory multiple="multiple"
+                id="upload-folder"/>
+      </div>
+      <div>
+        <button class="btn settings">
+          <img src="./pictures/gear.png"> Settings
+        </button>
+      </div>
+    </nav>
+    <div class="container">
+      <table >
+        <thead>
+          <tr>
+            <th class="file_name">File Name</th>
+            <th class="status">Status</th>
+            <th class="method">Method</th>
+            <th class="actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="file_to_delete">
+
+        </tbody>
+      </table>
+
+    </div>
+    <div class="informations">
+
+    </div>
+    <script type="text/javascript" src="renderer.js">
+    </script>
+
+  </body>
+</html>

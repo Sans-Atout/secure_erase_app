@@ -1,0 +1,20 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A secure erase app with a GUI for Linux",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/Sans-Atout/secure_erase_app",
+  "keywords": [
+    "Secure",
+    "Erase",
+    "Linux",
+    "Electron"
+  ],
+  "author": "Augustin ROUSSET-ROUVIERE",
+  "devDependencies": {
+    "electron": "^17.0.0"
+  }
+}

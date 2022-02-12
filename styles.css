@@ -1,0 +1,146 @@
+:root{
+  --background-color: #171421;
+  --blue : #16b;
+  --filter-blue : invert(29%) sepia(89%) saturate(1290%) hue-rotate(190deg) brightness(90%) contrast(95%);;
+  --red: #a00;
+  --green : #093;
+  --base-color: #EEE;
+  --filter-base : invert(98%) sepia(5%) saturate(325%) hue-rotate(189deg) brightness(115%) contrast(100%);
+  --add-trash: #742388;
+  --grey : #5E5C64;
+  --default-font-size : 20pt;
+}
+
+html {
+    padding : 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin : 0;
+}
+
+body{
+  background-color: var(--background-color);
+  color : var(--base-color);
+  font-size: var(--default-font-size);
+  padding: 60px;
+  margin: 0;
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: unset;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  justify-content: space-between;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.btn{
+  color: var(--base-color);
+  padding: 15px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: var(--default-font-size);
+  vertical-align: middle;
+  border : none;
+  /*padding-right: 5%;
+  padding-left: 5%;*/
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.btn > img{
+  vertical-align: middle;
+}
+
+img{
+  max-height: 54px;
+}
+
+.add-trash{
+  background-color: var(--add-trash);
+}
+
+.upload-folder {
+  background-color: var(--blue);
+}
+
+.settings{
+  background-color: var(--grey);
+}
+
+.container{
+  height: 500px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.informations{
+  height: 200px;
+  max-height: 200px;
+}
+
+table{
+  font-size: var(--default-font-size);
+  width: 100%;
+  padding-top: 2rem;
+}
+
+tr{
+  width: 100%;
+  padding: 10px;
+}
+
+th{
+    border: 1px solid var(--base-color);
+    padding: 10px;
+}
+
+.file_name{
+  width: 70%;
+}
+
+.status, .actions, .method{
+  width: 10%;
+}
+
+erase-file{
+  display: inline-block;
+     width: 100%;
+}
+
+erase-file > tr {
+  display: table-row;
+     width: 100%;
+}
+td{
+  padding: 10px;
+  text-align: center;
+  vertical-align: center;
+  border-bottom: 1px solid var(--base-color);
+  margin: 0;
+}
+
+.action-section > img{
+  height: 32px;
+  cursor: pointer;
+}
+
+.action-section > .start{
+  filter: var(--filter-base);
+}
+
+.action-section > .running{
+  filter: var(--filter-blue);
+}
