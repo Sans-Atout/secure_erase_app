@@ -9,7 +9,7 @@
    viewBox="0 0 32 32"
    style="enable-background:new 0 0 32 32;"
    xml:space="preserve"
-   sodipodi:docname="stop.svg"
+   sodipodi:docname="start_blue.svg"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -40,14 +40,13 @@
    id="first">
 		<g
    id="g6"
-   transform="matrix(1.0040522,0.00270272,-0.00274286,1.0078901,-6.4299854,0.04192601)"
+   transform="translate(-6.3764422,0.07935512)"
    style="fill:#1166bb;fill-opacity:1">
 			<path
    id="polygon2"
    style="fill:#1166bb;stroke-width:1.00222;fill-opacity:1"
    transform="matrix(-1.0024234,0,0,0.99316464,32.009606,0.06713301)"
-   d="m -6.2934949,-0.27302534 -0.1605562,32.34844034 32.2070191,0.03133 -0.07334,-14.33126 c 0,0 -0.0017,-17.83498601 0.01215,-17.85529601 z"
-   sodipodi:nodetypes="cccccc" />
+   d="M 0.00976563,-0.06835937 V 32.152344 L 23.880859,16.091797 v -0.002 c 0.01024,-0.02613 0.02329,-0.05 0.03711,-0.07031 z" />
 			<path
    id="rect4"
    style="fill:#1166bb;stroke-width:1.00222;fill-opacity:1"

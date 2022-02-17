@@ -12,21 +12,21 @@
     <nav>
 
       <div>
-        <button class="btn add-trash" onclick="addFile(this);">
-          <img src="./pictures/trash.png"> Add Trash
+        <button class="btn add-trash" onclick="addTrash(this);">
+          <img src="./pictures/trash.png"> <p>Add Trash</p>
         </button>
       </div>
 
       <div>
         <label for="upload-file" class="upload-folder btn">
-            <img src="./pictures/documents.png"> Add files
+            <img src="./pictures/documents.png"> <p>Add files</p>
         </label>
-        <input  type="file" multiple="multiple" id="upload-file"/>
+        <input  type="file" multiple="multiple" id="upload-file" onchange="addFiles(this);"/>
       </div>
 
       <div>
         <label for="upload-folder" class="upload-folder btn">
-            <img src="./pictures/empty-folder.png"> Add folder
+            <img src="./pictures/empty-folder.png"> <p>Add folder</p>
         </label>
         <input  type="file" webkitdirectory mozdirectory msdirectory
                 odirectory directory multiple="multiple"
@@ -34,7 +34,7 @@
       </div>
       <div>
         <button class="btn settings">
-          <img src="./pictures/gear.png"> Settings
+          <img src="./pictures/gear.png"> <p>Settings</p>
         </button>
       </div>
     </nav>

@@ -43,7 +43,7 @@
    transform="translate(-3.9599456,-0.09200183)">
 			<path
    id="polygon2"
-   style="fill:#030104;stroke-width:0.999998"
+   style="fill:#1166bb;stroke-width:0.999998;fill-opacity:1"
    d="M 32.022152,0.0505762 V 32.051039 l -8.781126,-0.016 -0.04656,-31.88560967 c 0,0 1.504638,1.19068467 0,0 z"
    sodipodi:nodetypes="cccccc" />
 			<path
@@ -54,7 +54,7 @@
    sodipodi:nodetypes="sccsssccccscccccccsccssscccssccccccccccsccccccccccsccccccccccccccccccccscccccccccccccccccc" />
 		<path
    id="path1179"
-   style="fill:#030104;stroke-width:0.999998"
+   style="fill:#1166bb;stroke-width:0.999998;fill-opacity:1"
    d="M 16.697431,0.10459052 V 32.105053 l -8.781126,-0.016 -0.04656,-31.88560935 c 0,0 1.504638,1.19068465 0,0 z"
    sodipodi:nodetypes="cccccc" /></g>
 	</g>
