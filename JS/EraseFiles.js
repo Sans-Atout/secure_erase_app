@@ -7,6 +7,7 @@ class EraseFiles extends HTMLTableRowElement {
     this.method = method;//"default";
     this.status = "TODO";
     this.actions = "start";
+    this.avancement = 0;
     this.setAttribute('path',this.path);
     this.setAttribute('method',this.method);
     this.setAttribute('action','start');
@@ -28,8 +29,6 @@ class EraseFiles extends HTMLTableRowElement {
         let progressBar = document.createElement("div");
         progressBar.setAttribute("class","meter");
         let bar = document.createElement("span");
-        this.avancement = 0;
-
         bar.setAttribute("style","width: "+this.avancement+"%");
         progressBar.appendChild(bar);
         td.appendChild(progressBar);
@@ -63,7 +62,7 @@ class EraseFiles extends HTMLTableRowElement {
         var span = document.createElement("img");
         span.setAttribute('class','start');
         span.setAttribute('onclick','startInfo(this);')
-        span.setAttribute('src','./pictures/start.svg');
+        span.setAttribute('src','./pictures/start_white.svg');
         td.appendChild(span);
         break;
       case "running":
@@ -85,18 +84,28 @@ class EraseFiles extends HTMLTableRowElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
+    if(name == "avancement"){
+      console.log(newValue);
+      this.avancement = newValue;
+      this.updateView();
+      return;
+    }
+
     if (name == "action")
     {
       if(oldValue == "start" && newValue == "running"){
         this.actions = newValue;
         this.status = "Progress";
         this.updateView();
+        return;
       }
+      return;
+
     }
   }
 
   static get observedAttributes(){
-    return ["method", "action"];
+    return ["method", "action","avancement"];
   }
 
   updateView(){
@@ -105,6 +114,7 @@ class EraseFiles extends HTMLTableRowElement {
     this.appendChild(this.getStatus());
     this.appendChild(this.getMethod());
     this.appendChild(this.getAction());
+    return;
   }
 
 }
