@@ -1,6 +1,7 @@
 
 const deleteTable = document.getElementById("file_to_delete");
-const {secure_erase} = require('./NapiModules/secure-erase.node');
+const {secure_erase,file_exist,dir_exist } = require('./NapiModules/secure-erase.node');
+//const fs = require('fs').promises;
 
 function addTrash(){
   let username = require("os").userInfo().username ;
@@ -34,10 +35,21 @@ async function startInfo(element){
   //element.removeAttribute('action');
   elementToDelete.setAttribute('action','running');
   elementToDelete.setAttribute('avancement',0);
-  //console.log(is_file_exist);
-  //if(is_file_exist(element.path)){
-  //console.log(elementToDelete.path);
-  secure_erase(elementToDelete.path);
+  path = elementToDelete.path;
+  let isFile = file_exist(path);
+  let isDir = dir_exist(path);
+  if (isFile && isDir){
+    //TODO launch asynchrone deletetion of file
+  }else if(isFile && !isDir){
+    //Improve this part
+    secure_erase(elementToDelete.path);
+  }else{
+    //Raise Error
+  }
+  console.log(path);
+  console.log(isFile);
+  console.log(isDir);
+  //
     elementToDelete.setAttribute('avancement',100);
   //}
   //console.log(elementToDelete);
